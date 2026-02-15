@@ -89,3 +89,101 @@ DevFlow AI combines:
 ---
 
 ## 📁 Project Structure
+
+
+
+---
+
+## 🗄️ Database Architecture
+
+### Users Collection
+- id  
+- name  
+- email  
+- reputation  
+- createdAt  
+
+### Questions Collection
+- id  
+- title  
+- description  
+- userId  
+- tags  
+- voteCount  
+- answerCount  
+- viewCount  
+- createdAt  
+
+### Answers Collection
+- id  
+- questionId  
+- userId  
+- content  
+- voteCount  
+- isAccepted  
+- createdAt  
+
+### Votes Collection (Normalized)
+- userId  
+- entityId  
+- entityType (question/answer)  
+- voteType (up/down)  
+
+This structure supports scalability and prevents vote duplication.
+
+---
+
+## 🔐 Security Considerations
+
+- Appwrite role-based access control  
+- Secure API keys in environment variables  
+- Input validation  
+- Rate limiting ready  
+- Optimistic UI with server verification  
+
+---
+
+## 💡 SaaS Architecture Highlights
+
+- Clean separation of concerns  
+- Normalized DB schema  
+- Optimistic UI updates  
+- Pagination-ready queries  
+- Modular folder structure  
+- Scalable state management  
+- Ready for monetization layer  
+
+---
+
+## 📊 Performance Optimizations
+
+- Indexed queries in Appwrite  
+- Server-side rendering where needed  
+- Lazy loading components  
+- Efficient vote recalculations  
+- Controlled re-renders via Zustand  
+
+---
+
+## 🛠️ Tech Stack Summary
+
+| Category | Technology |
+|----------|------------|
+| Framework | Next.js 15 |
+| Language | TypeScript |
+| Backend | Appwrite |
+| State | Zustand |
+| UI | MagicUI / Aceternity |
+| AI | Gemini / OpenAI (Optional) |
+| Deployment | Vercel |
+
+---
+
+## 🚀 Getting Started
+
+### 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/your-username/devflow-ai.git
+cd devflow-ai
+npm install
